@@ -1,0 +1,23 @@
+package com.blackcoffer.datavis_dashboard.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.blackcoffer.datavis_dashboard.entity.Data;
+import com.blackcoffer.datavis_dashboard.repository.DataRepository;
+import com.blackcoffer.datavis_dashboard.service.DataService;
+
+@Service
+public class DataServiceImpl implements DataService {
+	
+	@Autowired
+	DataRepository dataRepo;
+
+	@Override
+	public List<Data> getData() {
+		return dataRepo.findAll();
+	}
+
+}

@@ -1,0 +1,7 @@
+spring.application.name=dataVis_Dashboard
+spring.datasource.url=jdbc:mysql://localhost:3306/datavis_dashboard
+spring.datasource.username=dev
+spring.datasource.password=admin
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+server.port= 8081
+

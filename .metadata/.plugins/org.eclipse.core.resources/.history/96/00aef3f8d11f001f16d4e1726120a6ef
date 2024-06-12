@@ -1,0 +1,5 @@
+package com.blackcoffer.datavis_dashboard.entity;
+
+public class Data {
+
+}

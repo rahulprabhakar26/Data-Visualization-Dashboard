@@ -1,0 +1,68 @@
+package com.blackcoffer.datavis_dashboard.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.blackcoffer.datavis_dashboard.entity.Data;
+import com.blackcoffer.datavis_dashboard.repository.DataRepository;
+import com.blackcoffer.datavis_dashboard.service.DataService;
+
+@Service
+public class DataServiceImpl implements DataService {
+	
+	@Autowired
+	DataRepository dataRepo;
+
+	@Override
+	public List<Data> getData() {
+		return dataRepo.findAll();
+	}
+
+	@Override
+	public List<Data> getDataByEndYear(int endyear) {
+		return dataRepo.findByYearLessThanEqual(endyear);
+	}
+
+	@Override
+	public List<Data> getDataByCountry(String country) {
+		return dataRepo.getDataByCountry(country) ;
+	}
+
+	@Override
+	public List<Data> getDataByTopic(String topic) {
+		return dataRepo.getDataByTopic(topic);
+	}
+
+	@Override
+	public List<Data> getDataByRegion(String region) {
+		return dataRepo.getDataByRegion(region);
+	}
+
+	@Override
+	public List<Data> getDataByPest(String pest) {
+	     return dataRepo.getDataByPest(pest);
+	}
+
+	@Override
+	public List<Data> getDataBySource(String source) {
+		return dataRepo.getDataBySource(source);
+	}
+
+	@Override
+	public List<Data> getDataBySwot(String swot) {
+		return dataRepo.getDataBySwot(swot);
+	}
+
+	@Override
+	public List<Data> getDataByCity(String city) {
+		return dataRepo.getDataByCity(city);
+	}
+
+	@Override
+	public List<Data> getDataBySector(String sector) {
+		return dataRepo.getDataBySector(sector);
+	}
+
+}

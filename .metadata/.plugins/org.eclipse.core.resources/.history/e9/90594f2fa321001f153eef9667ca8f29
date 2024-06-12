@@ -1,0 +1,34 @@
+package com.blackcoffer.datavis_dashboard.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.blackcoffer.datavis_dashboard.entity.Data;
+
+@Service
+public interface DataService {
+
+	List<Data> getData();
+
+	List<Data> getDataByEndYear(int endyear);
+
+	List<Data> getDataByCountry(String country);
+
+	List<Data> getDataByTopic(String topic);
+
+	List<Data> getDataByRegion(String region);
+
+	List<Data> getDataByPest(String pest);
+
+	List<Data> getDataBySource(String source);
+
+	List<Data> getDataBySwot(String swot);
+
+	List<Data> getDataByCity(String city);
+
+	List<Data> getDataBySector(String sector);
+
+	
+
+}

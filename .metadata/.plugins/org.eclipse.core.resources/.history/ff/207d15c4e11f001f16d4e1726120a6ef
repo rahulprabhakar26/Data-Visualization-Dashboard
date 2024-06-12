@@ -1,0 +1,26 @@
+package com.blackcoffer.datavis_dashboard.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.blackcoffer.datavis_dashboard.entity.Data;
+import com.blackcoffer.datavis_dashboard.service.DataService;
+
+
+@Controller
+public class DataController {
+	
+	@Autowired
+	DataService dataService;
+	
+	@GetMapping(value="/get")
+	public List<Data>getData() {
+		return dataService.getData();
+	}
+	
+	
+
+}

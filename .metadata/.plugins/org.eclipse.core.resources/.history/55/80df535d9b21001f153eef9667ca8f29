@@ -1,0 +1,18 @@
+package com.blackcoffer.datavis_dashboard.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.blackcoffer.datavis_dashboard.entity.Data;
+
+@Service
+public interface DataService {
+
+	List<Data> getData();
+
+	List<Data> getDataByEndYear(int endyear);
+
+	
+
+}

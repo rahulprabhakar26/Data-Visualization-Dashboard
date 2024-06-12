@@ -1,0 +1,5 @@
+package com.blackcoffer.datavis_dashboard.serviceimpl;
+
+public class DataServiceImpl {
+
+}
